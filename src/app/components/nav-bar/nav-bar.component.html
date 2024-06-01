@@ -1,0 +1,46 @@
+<!-- <nav class="navbar">
+  <div class="navbar-logo">
+    <img src="assets/Logo.png" alt="My App Logo" />
+  </div>
+  <ul class="navbar-links">
+    <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/search-flights">Search Flights</a></li>
+    <li><a routerLink="/check-in">Check In</a></li>
+    <li><a routerLink="/view-booking">View My Booking</a></li>
+    <li><a routerLink="/about-us">About Us</a></li>
+  </ul>
+
+</nav> -->
+<nav class="navbar">
+  <div class="navbar-content">
+    <div class="navbar-logo">
+      <img src="assets/Logo.png" alt="My App Logo" />
+    </div>
+    @if(token){
+    <ul class="navbar-links" [class.active]="navbarOpen">
+      <li><a routerLink="/search-flights">Search Flights</a></li>
+      <li><a routerLink="/checkin">Check In</a></li>
+      <li><a routerLink="/viewbooking">View My Booking</a></li>
+      <li><a routerLink="/about-us">About Us</a></li>
+      <!-- <li><a routerLink="/login">Login</a></li> -->
+      <li><a routerLink="/logout" (click)="logout()">Logout</a></li>
+    </ul>
+    }
+    @else{
+    <ul class="navbar-links" [class.active]="navbarOpen">
+      <li><a routerLink="/search-flights">Search Flights</a></li>
+      <li><a routerLink="/checkin">Check In</a></li>
+      <li><a routerLink="/viewbooking">View My Booking</a></li>
+      <li><a routerLink="/about-us">About Us</a></li>
+      <li><a routerLink="/login">Login / SignUp</a></li>
+      <!-- <li><a routerLink="/logout" (click)="logout()">Logout</a></li> -->
+    </ul>
+    }
+    <button class="navbar-toggle" (click)="toggleNavbar()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </div>
+
+</nav>

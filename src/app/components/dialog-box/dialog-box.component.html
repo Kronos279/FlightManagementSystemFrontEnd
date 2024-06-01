@@ -1,0 +1,43 @@
+<!-- update-flight-dialog.component.html -->
+<h1 mat-dialog-title>Update Flight Details</h1>
+  <form [formGroup]="flightForm" class="flight-form">
+    <div class="form-field">
+      <label for="flight_number">Flight Number</label>
+      <input id="flight_number" type="text" formControlName="flight_number" class="form-input" />
+    </div>
+
+    <div class="form-field">
+      <label for="source">Source</label>
+      <input id="source" type="text" formControlName="source" class="form-input" />
+    </div>
+
+    <div class="form-field">
+      <label for="destination">Destination</label>
+      <input id="destination" type="text" formControlName="destination" class="form-input" />
+    </div>
+
+    <div class="form-field">
+      <label for="date">Date</label>
+      <input id="date" type="date" formControlName="date" class="form-input" />
+    </div>
+
+    <div class="form-field">
+      <label for="departure_time">Departure Time</label>
+      <input id="departure_time" type="time" formControlName="departure_time" class="form-input" />
+    </div>
+
+    <div class="form-field">
+      <label for="arrival_time">Arrival Time</label>
+      <input id="arrival_time" type="time" formControlName="arrival_time" class="form-input" />
+    </div>
+
+    <div class="form-field">
+      <label for="fare">Fare</label>
+      <input id="fare" type="number" formControlName="fare" class="form-input" />
+    </div>
+
+    <div class="form-actions">
+      <button type="button" class="btn cancel-btn" (click)="close()">Close</button>
+      <button type="submit" class="btn save-btn" (click)="save()" [disabled]="!flightForm.valid">Save</button>
+    </div>
+  </form>

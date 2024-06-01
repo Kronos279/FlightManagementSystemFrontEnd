@@ -6,5 +6,7 @@ export interface flightdetails{
   "destination": string,
   "date": string,
   "departure_time": string,
-  "fare": number
+  "arrival_time":string,
+  "fare": number,
+  "available_seats":number
 }

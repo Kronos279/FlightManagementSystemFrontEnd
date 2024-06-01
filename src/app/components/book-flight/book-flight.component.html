@@ -1,0 +1,79 @@
+<div class="container">
+
+  <div class="flight-card">
+  <h2>Flight Details</h2>
+  <div class="flight-details">
+    <div class="detail-item">
+      <h3>Flight Number: {{ selectedFlight?.flight_number }}</h3>
+    </div>
+    <div class="detail-item">
+      <h3>Date: {{ selectedFlight?.date | date:'dd-MM-yyyy' }}</h3>
+    </div>
+    <div class="detail-item">
+      <h3>Source: {{ selectedFlight?.source }}</h3>
+    </div>
+    <div class="detail-item">
+      <h3>Destination: {{ selectedFlight?.destination }}</h3>
+    </div>
+    <div class="detail-item">
+      <h3>Departure Time: {{ selectedFlight?.departure_time }}</h3>
+    </div>
+    <div class="detail-item">
+      <h3>Arrival Time: {{ selectedFlight?.arrival_time }}</h3>
+    </div>
+    <div class="detail-item">
+      <h3>Fare: {{ selectedFlight?.fare | currency:'INR' }}</h3>
+    </div>
+    <div class="detail-item">
+      <h3>Available Seats: {{selectedFlight?.available_seats}}</h3>
+    </div>
+  </div>
+</div>
+<div>
+  <h1 style="color: aliceblue;">Toatal Fare:- {{totalfare | currency:'INR'}}</h1>
+</div>
+
+
+  <h2 class="noOfPassengers">Number of passengers :- {{numberOfPassengers}}</h2>
+
+  @if(passengerForms.controls.length > 0){
+
+  @for(i of passengerForms.controls;track $index){
+  <form class="passenger-form" [formGroup]="i" id="myform" (ngSubmit)="onFormSubmit(i)">
+    <div class="passengerDetails-section">
+      <h3>Passenger</h3>
+    </div>
+    <div class="index"><h2>{{$index+1}}</h2></div>
+    <div class="form-group">
+      <label for="firstName">First Name:</label>
+      <input name="firstName" formControlName="firstName" required>
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name:</label>
+      <input name="lastName" formControlName="lastName" required>
+    </div>
+    <div class="form-group">
+      <label for="gender">Gender:</label>
+      <select name="gender" formControlName="gender" required>
+        <option value="" disabled selected>Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input name="email" formControlName="email" type="email" required>
+    </div>
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number:</label>
+      <input name="phoneNumber" formControlName="phoneNumber" type="number" required>
+    </div>
+    <button type="button" class="remove-button" (click)="OnDecrease($index)">-</button>
+    <!-- <button type="submit" hidden>Submit Passenger Details</button> -->
+  </form>
+  }
+  }
+  <button type="button" class="add-passenger-button" (click)="OnIncrease()">+</button>
+  <button type="submit" class="submit-button" form="myform">Submit Passenger Details</button>
+</div>

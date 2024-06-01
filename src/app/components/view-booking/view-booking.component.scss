@@ -1,0 +1,183 @@
+.booking-card {
+
+  width: 60%;
+  float: left;
+  padding: 0 20px;
+  overflow: hidden;
+  margin: 10px;
+}
+.container{
+  margin-top: 10%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.heading{
+  font-size: large;
+  font-weight: 300;
+  color: azure;
+}
+.logo{
+  justify-self: center;
+  vertical-align: middle;
+  text-align: center;
+  align-self: center;
+  height: 95px;
+  width: 130px;
+  margin-bottom: 50px;
+}
+
+.logo p{
+  margin-top: 5px;
+  font-size: larger;
+  font-weight: 300;
+
+}
+.global {
+  height: 100%;
+  width: 100%;
+  background-image: url('/assets/NewBackground2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  overflow-y: auto;
+}
+
+.BookingInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  border-radius: 15px;
+  background-color: #08335dd6;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.booking-card .item-right {
+
+  padding: 79px 50px;
+  margin-right: 20px;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 20%;
+}
+
+ .num {
+  font-size: 60px;
+  align-self: center;
+  text-align: center;
+  color: #5fafff;
+}
+
+.day {
+  align-self: center;
+  text-align: center;
+  font-size: 25px;
+}
+
+.booking-card .item-right .day {
+  color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 9px;
+}
+
+.booking-card .item-left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 34px 0px 19px 46px;
+  border-left: 3px dotted #000000;
+}
+
+.booking-card .item-left .title {
+  color: #ffffff;
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.booking-card .item-left .sce,
+.booking-card .item-left .loc {
+  margin-top: 5px;
+  display: block;
+}
+
+.booking-card .item-left .sce .icon,
+.booking-card .item-left .loc .icon {
+  align-self: center;
+  justify-self: center;
+  float: left;
+  margin-top: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.booking-card .item-left .sce p,
+.booking-card .item-left .loc p {
+  float: left;
+  word-spacing: 5px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+
+
+form {
+  display: flex;
+}
+
+label {
+  padding-top: 10px;
+  font-size: large;
+  color: #fff;
+}
+
+input{
+  text-align: center;
+  border-radius: 10px;
+  width: 400px;
+  height: 25pt;
+  margin: 5px;
+}
+button[type="button"] {
+  margin: 10px;
+  // padding: 8px;
+  width: 100pt;
+  height: 23pt;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  margin-bottom: 10px;
+  background-color: #379bff;
+  border-radius: 10px;
+}
+
+button[type="submit"] {
+  align-self: center;
+  text-align: center;
+  margin-left: 10px;
+  height: 25pt;
+  width: 100px;
+  border-radius: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}

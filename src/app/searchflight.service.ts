@@ -16,9 +16,7 @@ export class SearchflightService {
   searchFlights(url:string){
     return this.httpClient.get<flightdetails[]>(url).pipe(
       catchError((error) => {
-        // Show an alert with the error message
         alert('An error occured No flights available for the given date.');
-        // Forward the error downstream
         return throwError(() => error);
   }))
 }

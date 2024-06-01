@@ -1,0 +1,85 @@
+
+.about-us-container {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/assets/NewBackground2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  overflow-y: auto;
+}
+
+.scrolling-text {
+  position: absolute;
+  width: 62%;
+  animation: scroll-up 40s linear infinite;
+}
+
+@keyframes scroll-up {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: -100%;
+  }
+}
+.Welcome-para{
+
+}
+.scrolling-text h1,
+.scrolling-text h2,
+.scrolling-text h3,
+.scrolling-text p,
+.scrolling-text ul,
+.scrolling-text li {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+.scrolling-text li{
+  font-size: 16px;
+}
+.scrolling-text h1{
+  font-size: 40px;
+}
+.project-overview,
+.about-developer {
+  color: white;
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.project-overview h2,
+.about-developer h2 {
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.project-overview ul,
+.about-developer ul {
+  margin-top: 20px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.project-overview li,
+.about-developer li {
+  margin-top: 20px;
+  background: #08335d;
+  margin: 10px 0;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.project-overview li strong,
+.about-developer li strong {
+  color: #489fd8;
+}

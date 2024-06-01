@@ -4,35 +4,45 @@
   align-items: center;
   height: 100vh;
   margin: 0;
-  // background-image: url('/assets/NewBackground.jpg');
-  // background-size: cover;
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-attachment: fixed;
 }
 
 .search-container {
-  width: 700px; /* Adjust this value to your desired width */
+  height: 100%;
+  width: 100%; /* Adjust this value to your desired width */
 }
 
 .video-background {
   position: fixed;
+
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
   z-index: -1; /* Ensure it is behind other content */
   overflow: hidden;
 }
-
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 #bg-video {
+  // position: fixed;
+  // top: 50%;
+  // left: 50%;
+  // min-width: 100%;
+  // min-height: 100%;
+  // width: auto;
+  // height: auto;
+  // z-index: -1;
+  // transform: translate(-50%, -50%);
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1;
   transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

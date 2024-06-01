@@ -48,7 +48,7 @@ export class SearchFlightComponent {
     })
   }
 
-  dataService = inject(DataService)
+  // dataService = inject(DataService)
   searchform:search={
     source: "",
     destination:"",
@@ -62,8 +62,8 @@ export class SearchFlightComponent {
     console.log(url);
     this.searchflightservice.searchFlights(url).subscribe((res) => {
       if (res && res.length > 0) {
-        this.dataService.setFlightData(res);
-        this.router.navigate(['displayflights']);
+        // this.dataService.setFlightData(res);
+        this.router.navigate(['displayflights'],{state:{ flightData: res }});
       } else {
         // Response is empty, handle accordingly (show error message, etc.)
         alert('No flights found.');

@@ -1,8 +1,49 @@
 
 /* search-flight.component.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+.logoWrapper{
+  margin-top: 50%;
+  background: rgba(58, 65, 69, 0.5);
+}
+.Logo{
+  background: rgba(58, 65, 69, 0.5);
+  margin: 0;  /* Ensure no margins */
+  padding: 0; /* Ensure no padding */
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image{
+
+  width: 470px;
+}
+
+.parent-container{
+  width: 100%;
+  background: rgba(58, 65, 69, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container {
   max-width: 600px;
   margin: 0 auto;
+  margin-top: 2%;
+  margin-bottom: 9%;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -16,14 +57,10 @@ h1 {
   font-family: 'Nunito', sans-serif;
   /* Change the font family */
   font-weight: 600; /* Add bold font weight */
-  color: #B4D4FF; /* Change the color to a royal blue shade */
-  /* Add gradient background */
-  // background-image: transparent;
-  opacity: 0.6;
-  // linear-gradient(to right, rgb(251, 251, 251), rgb(7, 227, 227));
-  /* Ensure only text is affected by the gradient */
-  // -webkit-background-clip: text;
-  // -webkit-text-fill-color: transparent;
+  color:  #ffffff; /* Change the color to a royal blue shade */
+  // #B4D4FF previous color
+  opacity: 0.8;
+
   font-size: 50px;
   line-height: 1.2;
 }

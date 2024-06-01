@@ -1,0 +1,99 @@
+<!-- <div class="global">
+  <div class="container">
+    <form (ngSubmit)="getBookings(PNR)">
+      <label for="pnr">Enter PNR:</label>
+      <input type="text" name="pnr" [(ngModel)]="PNR">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+
+  <div id="BookingInfo">
+    @if(bookingInfo.length >0){
+
+    @for(booking of bookingInfo; track $index){
+    <div class="booking-card" id="booking-card-{{$index}}">
+      <div class="header">
+        <h2>{{ booking.firstName }} {{ booking.lastName }}</h2>
+      </div>
+      <p>Gender: {{ booking.gender }}</p>
+      <p>Email: {{ booking.email }}</p>
+      <p>Phone Number: {{ booking.phoneNumber }}</p>
+      <p>PNR Number: {{ booking.pnrNumber }}</p>
+      <p>Flight Number: {{ booking.flightdetails.flight_number }}</p>
+      <p>Source: {{ booking.flightdetails.source }}</p>
+      <p>Destination: {{ booking.flightdetails.destination }}</p>
+      <p>Date: {{ booking.flightdetails.date | date:"dd-MM-yyy"}}</p>
+      <p>Departure Time: {{ booking.flightdetails.departure_time }}</p>
+      <p>Arrival Time: {{ booking.flightdetails.arrival_time }}</p>
+      <p>Fare: {{ booking.flightdetails.fare | currency:'INR' }}</p>
+
+    </div>
+    }
+    }
+
+    <div>
+      <button type="button" (click)="generatePDF()">Generate PDF</button>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+<div class="global">
+  <div class="container">
+    <form (ngSubmit)="getBookings(PNR)">
+      <input type="text" name="pnr" [(ngModel)]="PNR" placeholder="Enter PNR Number">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+  <!-- @if(!dataloaded){
+    <p>Loading.....</p>
+  } -->
+  <div class="BookingInfo">
+    @for(booking of bookingInfo; track $index){
+    <div class="booking-card" id="booking-card-{{$index}}">
+      <div class="item">
+        <div class="item-right">
+          <h2 class="num">{{ booking.flightdetails.date| date:"dd" }}</h2>
+          <p class="day">{{ booking.flightdetails.date | date:"MMM" }}</p>
+          <span class="up-border"></span>
+          <span class="down-border"></span>
+        </div> <!-- end item-right -->
+
+        <div class="item-left">
+          <div class="heading">
+            <h2 class="title">{{ booking.firstName }} {{ booking.lastName }}</h2>
+          </div>
+          <div class="sce">
+            <div class="icon">
+              <i class="fa fa-table"></i>
+            </div>
+            <p>{{ booking.flightdetails.date | date:"EEEE" }} <br> Dept: {{ booking.flightdetails.departure_time }}
+              Arvl: {{ booking.flightdetails.arrival_time }}</p>
+          </div>
+          <div class="fix"></div>
+          <div class="loc">
+            <div class="icon">
+              <i class="fa fa-map-marker"></i>
+            </div>
+            <p>From: {{ booking.flightdetails.source }} To {{ booking.flightdetails.destination }} <br /> Flight Number:
+              {{ booking.flightdetails.flight_number }}</p>
+          </div>
+        </div> <!-- end item-left -->
+        <div class= "logo">
+            <img src="/assets/Logo.png" alt="">
+            <p class="heading">Aether Wings Airways</p>
+        </div>
+      </div> <!-- end item -->
+    </div>
+    }
+    <div>
+      <button type="button" (click)="generatePDF()">Generate PDF</button>
+    </div>
+
+  </div>
+</div>
+

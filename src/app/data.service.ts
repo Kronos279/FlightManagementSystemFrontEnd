@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, catchError, throwError } from 'rxjs';
 import { flightdetails } from '../type/flightdetails';
 
 @Injectable({
@@ -15,7 +15,7 @@ export class DataService {
     this.flightDataSubject.next(data);
   }
 
-  private selectedFlight = new BehaviorSubject<flightdetails | null>(null);
+  private selectedFlight = new BehaviorSubject<flightdetails|null>(null);
   selectedFlight$ = this.selectedFlight.asObservable();
 
   setSelectedFlight(flight: flightdetails) {

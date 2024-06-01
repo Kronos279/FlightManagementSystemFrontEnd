@@ -1,0 +1,51 @@
+<!-- seat-select.component.html -->
+<div class="global-container">
+  <div class="Left-side">
+    <div class="card border-success mb-3" style="max-width: 20rem;">
+      <div class="card-header bg-transparent border-success">{{booking?.firstName}} {{booking?.lastName}} :-
+        {{booking?.pnrNumber}}</div>
+      <div class="card-body text-success">
+        <h1>{{booking?.flightdetails?.flight_number}} </h1>
+        <h3 class="card-title">Passenger Details:-</h3>
+        <p class="card-text"> <br>Email: {{booking?.email}} <br> Phone No: {{booking?.phoneNumber}} <br> Gender:
+          {{booking?.gender}} <br> Source: {{booking?.flightdetails?.source}} <br> Destination:-
+          {{booking?.flightdetails?.destination}} </p>
+      </div>
+      <div class="card-footer bg-transparent border-success">
+        <h4>Selected Seat:- {{selectedSeat?.seatNumber}} </h4>
+      </div>
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <button (click)="onConfirmSeat()" [disabled]="!selectedSeat" class="button-selectseat">Confirm Seat</button>
+      </div>
+    </div>
+    <div class="advertisement">
+      <img src="https://www.sunset.com/wp-content/uploads/in-flight-meal-pc-alexander-spatari-getty-1200x600.jpg" alt="">
+      <h2 >Add a Meal for 499/-</h2>
+    </div>
+    <div class="advertisement">
+      <img src="https://dinewithdrinks.com/wp-content/uploads/2022/08/what-is-a-flight-drink.jpg" alt="">
+      <h2>Add Unlimited drinks for 1299/-</h2>
+    </div>
+  </div>
+  <div class="seat-container">
+
+    <div class="heading">
+      <h2>Select Seat</h2>
+    </div>
+      @if(seats.length >0){
+      @for(seat of seats; track $index){
+      @if(seat.booking_id == null){
+      <div class="seat-box available " (click)="onSelectSeat(seat)"
+        [ngClass]="{'available': !seat.booking_id, 'booked': seat.booking_id, 'selected': selectedSeat?.seat_id === seat.seat_id}">
+        <p>{{seat.seatNumber}}</p>
+      </div>
+      }
+      @else {
+      <div class="seat-box booked">
+        <p>{{seat.seatNumber}}</p>
+      </div>
+      }
+      }
+      }
+  </div>
+</div>

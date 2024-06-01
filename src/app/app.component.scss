@@ -1,0 +1,24 @@
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+
+
+app-nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.content-container {
+  flex: 1;
+  overflow: auto;
+  position: relative;
+}

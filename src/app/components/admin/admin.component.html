@@ -1,0 +1,31 @@
+<div class="global">
+  <div class="container">
+    <div class="heading">
+      <h1>Admin Dashboard</h1>
+      <button class="add-button" type="button" (click)="addFlight()">Add Flight</button>
+      <button class="register-button" type="button" (click)="addAdmin()">Add Admin</button>
+    </div>
+    @for(flight of flightDetails;track $index){
+    <div class="flight-card">
+      <h3>| Flight Id: {{flight.flight_id}} |</h3>
+      <h3>Flight No.: {{ flight.flight_number }} |</h3>
+      <h3>From: {{ flight.source }} to {{ flight.destination }} |</h3>
+      <h3>Date: {{ flight.date }} |</h3>
+      <h3>Departure: {{ flight.departure_time }} |</h3>
+      <h3>Arrival: {{ flight.arrival_time }} |</h3>
+      <h3>Fare: {{ flight.fare | currency:"INR" }} |</h3>
+      <div class="button-container">
+        <div>
+          <button type="button" class="delete-button" (click)="deleteFlight(flight ,$index)">Delete</button>
+        </div>
+        <div>
+          <button type="button" class="update-button" (click)="updateFlight(flight.flight_id)">Update</button>
+        </div>
+        <!-- <div>
+        <button type="button" class="seats-button" (click)=" ViewSeats(flight.flight_id)">View Seats</button>
+      </div> -->
+      </div>
+    </div>
+    }
+  </div>
+</div>
