@@ -1,0 +1,114 @@
+
+{
+  "products":[
+      {
+        "id": 1,
+        "brand": "Apple",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ93B0SwyxqTzL0TtjOfD1dduw9Y7n92-SlNp-nt3JyA&s",
+        "currentprice": "59000",
+        "standardprice": "75000",
+        "name": "iPhone 11"
+      },
+
+      {
+      "id": 2,
+      "brand": "Samsung",
+      "image": "https://5.imimg.com/data5/SELLER/Default/2023/6/319962441/PY/DM/FH/4924047/samsung-galaxy-s20-fe-5g-cloud-lavender-128-gb-8-gb-ram-.jpg",
+      "currentprice": "48000",
+      "standardprice": "55000",
+      "name": "Samsung Galaxy S20"
+    },
+    {
+      "id": 3,
+      "brand": "Google",
+      "image": "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-5-5g-1.jpg",
+      "currentprice": "79900",
+      "standardprice": "89900",
+      "name": "Google Pixel 5"
+    },
+    {
+      "id": 4,
+      "brand": "OnePlus",
+      "image": "https://m.media-amazon.com/images/I/612dMOJRooL.jpg",
+      "currentprice": "39999",
+      "standardprice": "44999",
+      "name": "OnePlus 9 Pro"
+    },
+    {
+  "id": 7,
+  "brand": "Samsung",
+  "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTdeONFutVWumuL9_Tsu8kXU3uEsGHTnx5gfJRKnJLLnqDxrHmlJibokRNn2FQGBKgxW4sLXGPADi9LH60QvWyiMMWoKmrVjw&usqp=CAE",
+  "currentprice": "80000",
+  "standardprice": "110000",
+  "name": "Samsung Galaxy S21 Ultra"
+  }
+  ],
+
+  "flightDetails":[
+    {
+      "name": "New York",
+      "short": "NYC"
+    },
+    {
+      "name": "Los Angeles",
+      "short": "LAX"
+    },
+    {
+      "name": "Chicago",
+      "short": "ORD"
+    },
+    {
+      "name": "Miami",
+      "short": "MIA"
+    },
+    {
+      "name": "San Francisco",
+      "short": "SFO"
+    },
+    {
+      "name": "Los Angeles",
+      "short": "LAX"
+    },
+    {
+      "name": "San Francisco",
+      "short": "SFO"
+    },
+    {
+      "name": "Seattle",
+      "short": "SEA"
+    },
+    {
+      "name": "Boston",
+      "short": "BOS"
+    },
+    {
+      "name": "Atlanta",
+      "short": "ATL"
+    },
+    {
+      "name": "Dallas",
+      "short": "DFW"
+    },
+    {
+      "name": "Denver",
+      "short": "DEN"
+    },
+    {
+      "name": "Phoenix",
+      "short": "PHX"
+    },
+    {
+      "name": "Las Vegas",
+      "short": "LAS"
+    },
+    {
+      "name": "Orlando",
+      "short": "MCO"
+    },
+    {
+      "name": "Philadelphia",
+      "short": "PHL"
+    }
+  ]
+
+}

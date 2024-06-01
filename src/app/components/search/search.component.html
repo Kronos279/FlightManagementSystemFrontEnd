@@ -1,0 +1,7 @@
+<div class="flex justify-center align-items-center gap-2">
+<mat-form-field subscriptSizing="dynamic" style=" width: 60%;"  >
+  <mat-label>Search</mat-label>
+  <input matInput placeholder="Ex. Sony" (keypress)="onKeyPress($event)">
+</mat-form-field>
+<button mat-flat-button color="accent" class="w-250" style=" margin-top: 10px; background-color: cadetblue;" (click)="onClick()">Search</button>
+</div>

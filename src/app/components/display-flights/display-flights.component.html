@@ -1,0 +1,31 @@
+<div class="flight-details-container">
+  <h1>Flight Details</h1>
+  <div class="flight-item">
+    @for(flight of flightDetails; track $index){
+    <div class="flight-card">
+      <div class="flight-info">
+        <div class="airline-logo">
+          <img src="https://www.kindpng.com/picc/m/69-697714_air-india-logo-air-india-airlines-logo-hd.png"
+            alt="Airline Logo"> <!-- Update the image path -->
+        </div>
+        <div class="flex-coloumcard">
+          <h2 class="date">{{flight.date | date:"dd-MM-yyyy"}}</h2>
+          <div class="flight-times">
+            <div class="sourceDestinationTimeDiv">
+              <h2 class="time">{{ flight.departure_time }}</h2>
+              <h2 class="source">{{ flight.source }}</h2>
+                <div class="strike"><img class="line" src="/assets/line.png"></div>
+              <h2 class="destination">{{flight.destination }}</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flight-price">
+        <p>Fare:</p>
+        <h3>{{ flight.fare | currency:'INR' }}</h3>
+        <button class="select-button" (click)="onSelectFlight(flight)">Select</button>
+      </div>
+    </div>
+    }
+  </div>
+</div>

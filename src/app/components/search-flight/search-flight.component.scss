@@ -1,0 +1,86 @@
+
+/* search-flight.component.css */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.h1container{
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Nunito', sans-serif;
+  /* Change the font family */
+  font-weight: 600; /* Add bold font weight */
+  color: #B4D4FF; /* Change the color to a royal blue shade */
+  /* Add gradient background */
+  // background-image: transparent;
+  opacity: 0.6;
+  // linear-gradient(to right, rgb(251, 251, 251), rgb(7, 227, 227));
+  /* Ensure only text is affected by the gradient */
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
+  font-size: 50px;
+  line-height: 1.2;
+}
+
+form {
+  margin-top: 20px;
+  color: #fff; /* Set text color to white */
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea,
+input[type="date"],
+input[type="submit"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  color: #000000;
+  font-weight: 400;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+}
+
+.button_div{
+  display: flex;
+  justify-content: center;
+}
+
+.btn-primary {
+  background-color: #2278d4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.custom-button {
+  font-size: 16px; /* Increase the font size */
+  padding: 10px 24px; /* Increase the padding */
+  border-radius: 20px; /* Add rounded corners */
+  box-shadow: 0 2px 4px #00000033; /* Add a subtle box-shadow for Material Design */
+  transition: all 0.3s ease; /* Add a transition for hover effect */
+}
+
+.custom-button:hover {
+  background-color: #e2594d; /* Change background color on hover */
+  box-shadow: 0 2px 6px rgb(187, 62, 114); /* Increase box-shadow on hover */
+}

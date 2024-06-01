@@ -1,0 +1,20 @@
+<!-- <app-search (search)="onSearch($event)"></app-search>
+<div class="p-5 flex flex-wrap text-lg" >
+@for(item of filteredProducts; track $index){
+  <div class="shadow w-3/12 pr-2 mb-2">
+<app-product-card [product]="item"></app-product-card>
+</div>
+}
+</div> -->
+<div class="body">
+  <div class="video-background">
+    <video autoplay muted loop id="bg-video">
+      <source src="/assets/Video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="search-container">
+    <app-search-flight></app-search-flight>
+  </div>
+</div>
+
