@@ -14,13 +14,6 @@ import { Router } from '@angular/router';
 export class SignupComponent {
 
 
-  // userDetails={
-  //   name:'',
-  //   email:'',
-  //   role:'',
-  //   password:''
-  // }
-
   signUpForm : FormGroup;
 
   constructor(private loginregisterService:LoginRegisterService,private authService:AuthServiceService) {

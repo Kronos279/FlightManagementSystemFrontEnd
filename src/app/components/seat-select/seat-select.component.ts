@@ -7,7 +7,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CheckIn } from '../../../type/checkin';
 import { CheckinserviceService } from '../../checkinservice.service';
-import { error } from 'console';
 
 @Component({
   selector: 'app-seat-select',
@@ -31,14 +30,12 @@ export class SeatSelectComponent {
     if (navigation?.extras.state) {
       this.booking = navigation.extras.state['booking'];
   }
-  console.log("This is select seat ", this.booking)
 
 }
 ngOnInit():void{
   if (this.booking) {
     this.getallseatservice.getAllSeats(this.booking.flight_id).subscribe((res) => {
       this.seats = res;
-      console.log(this.seats);
     });
 }
 
@@ -60,11 +57,12 @@ onConfirmSeat(): void {
     seat_id: this.selectedSeat?.seat_id
   }
   if(this.selectedSeat!=null && this.booking !=null){
+    console.log(checkin);
     const confirmSeat = window.confirm(`Do you want to confirm seat ${this.selectedSeat.seatNumber}?`);
     if(confirmSeat){
       this.checkinService.bookSeat(checkin).subscribe((res)=> {
-        console.log(res)
-        this.router.navigate(["/checkin"])
+        console.log("This is checkin seat res" + res);
+        this.router.navigate(["/checkin"]);
       },(error)=>{
         alert("CheckIn Already Done");
       }

@@ -13,8 +13,6 @@ export const authInterceptorInterceptor: HttpInterceptorFn = (req, next) => {
       Authorization: `Bearer ${authToken}`
     }
   });
-
-  console.log(authReq);
   return next(authReq).pipe(
     catchError((err: any)=>{
       if(err instanceof HttpErrorResponse){

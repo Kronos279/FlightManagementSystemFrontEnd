@@ -42,7 +42,7 @@ export class AddDialogBoxComponent {
 
   createPassengerForm(): FormGroup{
     return new FormGroup({
-      flight_number: new FormControl('', Validators.required),
+      flight_number: new FormControl(this.data.flight_number, Validators.required),
       source: new FormControl('',Validators.required),
       destination: new FormControl('',Validators.required),
       date: new FormControl('',Validators.required),

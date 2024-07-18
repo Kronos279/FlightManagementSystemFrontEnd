@@ -10,6 +10,7 @@ import { PaymentGatewayService } from '../../payment-gateway.service';
 import { Router } from '@angular/router';
 import { rejects } from 'assert';
 import { error } from 'console';
+
 // import Razorpay from 'razorpay';
 
 declare var Razorpay:any;

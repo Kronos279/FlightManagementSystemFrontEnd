@@ -58,7 +58,7 @@ export class SearchFlightComponent {
 
   onSubmit(){
     const { source, destination, date } = this.searchform;
-    const url = `http://localhost:8082/search?source=${source}&destination=${destination}&date=${date}`;
+    const url = "http://localhost:8082/search?source="+source+"&destination="+destination+"&date="+date;
     console.log(url);
     this.searchflightservice.searchFlights(url).subscribe((res) => {
       if (res && res.length > 0) {

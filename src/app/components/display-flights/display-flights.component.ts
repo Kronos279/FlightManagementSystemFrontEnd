@@ -5,6 +5,7 @@ import { CurrencyPipe, DatePipe } from '@angular/common';
 import { Router } from '@angular/router';
 import { GetAvailableSeatsService } from '../../get-available-seats.service';
 import { forkJoin } from 'rxjs';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-display-flights',
@@ -52,9 +53,11 @@ export class DisplayFlightsComponent {
           alert("Something went wrong!");
         }
       },
-      error: (error:any) => {
+      error: (error: HttpErrorResponse) => {
         console.error("Error fetching data:", error);
-        alert("Kindly Login again!");
+          alert("Internal Server Error try logging in");
+          this.router.navigate(['/login']);
+
       }
     });
   }
